@@ -1,0 +1,66 @@
+{% block content %}
+<html>
+
+<head>
+	<title>Pokemon Image Classification</title>
+</head>
+<body>
+	<center><img src="./static/images/check1.PNG" style="margin-top:50px"></center>
+	<center><img src="./static/images/pokeball.png" style="margin-top:50px"></center>
+	
+	<form method="POST" enctype="multipart/form-data" action="uploader">
+		{% if error %}
+		<center><p style="margin-top:-265px;margin-left:0px;font-size:18;color:firebrick;padding:5px;font-family:Open Sans" >{{ error }}</p></center>
+		{% endif %}
+		{% if error=="" %}
+		<center><p style="margin-top:-265px;margin-left:0px;font-size:18;color:black;padding:5px;font-family:Open Sans" >Upload an Image of your Pokemon and see the result!</p></center>
+		{% endif %}
+		<div><input type="file" name="file" class="fileinput"></div>
+		<center><input type="submit" value=">>" class="btn" name="Submit"></center>
+		
+	</form>
+	<form method="POST" action="dashboard">
+		<div >
+		<input type="image" src="./static/images/database.jpg"  name="result" alt="database" width="56" height="56" title="see everyone's Pokemon result" style="margin-top:-300px;margin-left:80px"/>
+		</div>
+	</form>
+	<!--<img src="./static/gif/wishiwashi.gif" style="margin-top:50px;margin-left:80%">
+	<img src="./static/gif/cutiefly.gif" style="margin-top:10px;margin-left:10%">-->
+	
+</div>
+
+
+</body>
+
+</html>
+
+
+<style>
+.fileinput{
+padding:5px 10px;
+background:black;
+border:3px solid black;
+position:relative;
+color:white;
+border-radius:10px;
+text-align:center;
+float:left;
+cursor:pointer;
+align:center;
+top:-10px;
+left:39%;
+}
+
+.btn{
+padding:5px;
+margin-top:-10px;
+margin-left:15px;
+font-size:18;
+color:firebrick;
+border-radius:10px;
+cursor:pointer
+}
+
+
+</style>
+{% endblock %}
