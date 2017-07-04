@@ -1,0 +1,84 @@
+{% block content %}
+<html>
+
+<head>
+	<title>Pokemon Image Classification</title>
+</head>
+<body>
+	<form method="POST" action="index" >
+		<input type="image" src="./static/images/home.png"  name="home" width="120" height="120" title="Back to home" style="position:relative;left:20px;bottom:20px"/>
+	</form>
+	
+	<img src="./static/images/pin.png" width="120" height="120" style="position:relative;left:1000px;bottom:230px"/>
+	<img src="../static/img/{{ filename }}" width="300" height="300" class='border'/></br>
+	<p style="position:relative;left:880px;bottom:20px;font-family:monospace;font-size:20">{{ filename }}</p>
+	
+    
+	<div>
+	{% if  hasil  == "Fire": %}
+		<p style="font-family:monospace;font-size:20" align="center" >Based on our Neural Network prediction, Your Pokemon is a <br></p>
+		<p  align="center" style="font-family:cursive;font-size:20;color:firebrick;font-weight:bold"> Fire-type Pokemon </p>
+		<p  align="center" style="bottom:470px;font-family:monospace;font-size:20">
+		Fire-type is a mostly all out offensive type, given that most of the pokemon belonging to this type are very strong offensively,
+		but this comes at a cost of being fragile defensively, making many Fire-type Pokemon "glass cannons". However, they can not be burnt by any means.
+		Fire-type moves are super effective against Grass, Ice, Bug and Steel-type Pokemon
+		</p>
+	{% elif  hasil  == "Grass": %}
+	    <p style="font-family:monospace;font-size:20" align="center" >Based on our Neural Network prediction, Your Pokemon is a <br></p>
+		<p  align="center" style="font-family:cursive;font-size:20;color:ForestGreen;font-weight:bold"> Grass-type Pokemon </p>
+		<p  align="center" style="bottom:470px;font-family:monospace;font-size:20">
+		Grass-type is a type that has its own strength hindered by many weaknesses, reflecting the fragility of nature. The moves of this type
+		are super effective against Water, Ground and Rock-type Pokemon, but Grass-type Pokemon are weak to attacks from the following 5 types:
+		Fire, Flying, Bug, Ice and Poison
+		</p>
+	{% elif  hasil  == "Water": %}
+	    <p style="font-family:monospace;font-size:20" align="center" >Based on our Neural Network prediction, Your Pokemon is a <br></p>
+		<p  align="center" style="font-family:cursive;font-size:20;color:turquoise;font-weight:bold"> Water-type Pokemon </p>
+		<p  align="center" style="bottom:470px;font-family:monospace;font-size:20">
+		Water type is a very balanced type. This type is the most common out of the 18 types. Water-type Pokemon are super effective
+		against Fire-type, Rock-type and Ground-type Pokemon, but are weak to Electric-type and Grass-type attacks.
+		</p>
+	{% endif %}
+	</div>
+	<form method="POST" action="dashboard" style="position:relative;left:600px;bottom:350px">
+		<input type="submit"  value="Okay, I got it!" class="btn" name="submit" title="see everyone's Pokemon result"/>
+	</form>
+</body>
+</html>
+
+<style>
+div{
+width:500px;
+position:relative;
+left:100px;
+bottom:400px
+}
+
+.border{
+
+z-index:-1;
+position:relative;
+border-width:15px;
+border-color:crimson;
+max-width:300px;
+margin: 0 15px 15px 0;
+border-style:ridge;
+left:650px;
+bottom:-10px
+}
+
+.btn{
+padding:5px;
+margin-top:-10px;
+margin-left:15px;
+font-size:18;
+color:firebrick;
+border-radius:10px;
+cursor:pointer;
+position:relative;
+left:0px;
+bottom:-30px
+}
+
+</style>
+{% endblock %}
