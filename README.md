@@ -12,6 +12,10 @@ Mekanisme dari penggunaan aplikasi ini adalah pengguna mengunggah sebuah gambar 
 <br /><br />
 Dataset pokemon dapat di unduh di : https://www.dropbox.com/s/3qd8l2etd31f76p/datasets.zip?dl=0
 <br /><br />
+Sebelum menjalankan web nya, unduh model classifier cnn disini : https://www.dropbox.com/s/pt4fryg2lcwgt24/modelcnn.h5?dl=0
+<br />
+simpan dengan path web/app/model_klasifikasi/
+
 Web dapat dijalankan dengan perintah :
 <br /><br />
 cd web<br />
