@@ -24,5 +24,5 @@ python run.py
 Tampilan awal Web Pokemon :
 
 <p align="center">
-  <img src="web/app/static/images/web index.png" width="700"/>
+  <img src="web/app/static/images/web_index.png" width="700"/>
 </p>
