@@ -20,3 +20,9 @@ Web dapat dijalankan dengan perintah :
 <br /><br />
 cd web<br />
 python run.py
+
+Tampilan awal Web Pokemon :
+
+<p align="center">
+  <img src="web/app/static/images/web index.png" width="350"/>
+</p>
